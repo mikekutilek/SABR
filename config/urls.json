@@ -1,0 +1,32 @@
+[
+	{
+		"url": "leaders.aspx?pos=all&stats=bat&lg=all&qual=0&type=0&season=2018&month=0&season1=2018&ind=0&team=0&rost=0&age=0&filter=&players=0",
+		"type": "Batting",
+		"category": "Standard",
+		"year": "2018"
+	},
+	{
+		"url": "leaders.aspx?pos=all&stats=fld&lg=all&qual=0&type=0&season=2018&month=0&season1=2018&ind=0&team=0&rost=0&age=0&filter=&players=0",
+		"type": "Fielding",
+		"category": "Standard",
+		"year": "2018"
+	},
+	{
+		"url": "leaders.aspx?pos=all&stats=pit&lg=all&qual=0&type=0&season=2018&month=0&season1=2018&ind=0&team=0&rost=0&age=0&filter=&players=0",
+		"type": "Pitching",
+		"category": "Standard",
+		"year": "2018"
+	},
+	{
+		"url": "leaders.aspx?pos=np&stats=bat&lg=all&qual=0&type=7&season=2018&month=0&season1=2018&ind=0&team=0&rost=0&age=0&filter=&players=0",
+		"type": "Batting",
+		"category": "Pitch Value",
+		"year": "2018"
+	},
+	{
+		"url": "leaders.aspx?pos=all&stats=pit&lg=all&qual=0&type=4&season=2018&month=0&season1=2018&ind=0&team=0&rost=0&age=0&filter=&players=0",
+		"type": "Pitching",
+		"category": "Pitch Type",
+		"year": "2018"
+	}
+]
