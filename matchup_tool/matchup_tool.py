@@ -5,12 +5,19 @@ pitch_value_batting_data = pandas.read_csv('c:/Users/makut/Documents/Data/Fangra
 pitch_type_pitching_data = pandas.read_csv('c:/Users/makut/Documents/Data/Fangraphs/Pitching/2018/Pitch Type Pitching Data.csv')
 
 
-def calc_matchup():
-	calc_pitch_score('Starling Marte', 'Patrick Corbin')
-	calc_pitch_score('Gregory Polanco', 'Patrick Corbin')
-	calc_pitch_score('Francisco Cervelli', 'Patrick Corbin')
-	calc_pitch_score('Corey Dickerson', 'Patrick Corbin')
-	calc_pitch_score('Josh Bell', 'Patrick Corbin')
+def calc_matchup(team, pitcher):
+	batter_data = pitch_value_batting_data.loc[pitch_value_batting_data['Team'] == team]
+	batter_data = batter_data.fillna(0)
+
+	for index, batter in batter_data.iterrows():
+		#print(batter['Name'])
+		calc_pitch_score(batter['Name'], pitcher)
+
+	#calc_pitch_score('Starling Marte', 'Patrick Corbin')
+	#calc_pitch_score('Gregory Polanco', 'Patrick Corbin')
+	#calc_pitch_score('Francisco Cervelli', 'Patrick Corbin')
+	#calc_pitch_score('Corey Dickerson', 'Patrick Corbin')
+	#calc_pitch_score('Josh Bell', 'Patrick Corbin')
 
 
 def clean_data(data):
@@ -104,5 +111,5 @@ def calc_team_pitch_value(team):
 
 
 #replace_percents(pitch_type_pitching_data)
-calc_matchup()
+calc_matchup('Pirates', 'Patrick Corbin')
 #calc_team_pitch_value("Pirates")
