@@ -17,12 +17,12 @@ with open('config/urls.json') as f:
 	data = json.load(f)
 
 	for url in data:
-		if (url["category"] == "Pitch Value" or url["category"] == "Pitch Type"):
-			driver.get('https://www.fangraphs.com/' + url["url"])
-			driver.find_element_by_xpath('//*[@id="LeaderBoard1_cmdCSV"]').click()
+		#if (url["category"] == "Pitch Value" or url["category"] == "Pitch Type"):
+		driver.get('https://www.fangraphs.com/' + url["url"])
+		driver.find_element_by_xpath('//*[@id="LeaderBoard1_cmdCSV"]').click()
 
-			time.sleep(5)
+		time.sleep(5)
 
-			shutil.move("c:/Users/makut/Downloads/FanGraphs Leaderboard.csv", "c:/Users/makut/Documents/Data/Fangraphs/" + url["type"] + "/" + url["year"] + "/" + url["category"] + " " + url["type"] + " Data.csv")
+		shutil.move("c:/Users/makut/Downloads/FanGraphs Leaderboard.csv", "c:/Users/makut/Documents/Data/Fangraphs/" + url["type"] + "/" + url["year"] + "/" + url["category"] + " " + url["type"] + " Data.csv")
 
 driver.close()

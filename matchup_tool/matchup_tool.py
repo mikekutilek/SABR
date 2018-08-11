@@ -103,9 +103,10 @@ def calc_team_pitch_value(team):
 
 	w = wFB + wSL + wCT + wCB + wCH + wSF
 	wc = wFBc + wSLc + wCTc + wCBc + wCHc + wSFc
-	w_data['W'] = w
-	w_data['W/C'] = wc
-	print(w_data.sort_values(by='W', ascending=False))
+	w_data['W'] = round(w, 3)
+	w_data['W/C'] = round(wc, 3)
+	w_data.to_csv('test.csv')
+	return w_data.sort_values(by='W', ascending=False)
 
 def calc_situational_hitting_diff():
 	batter_data = runners_on_batting_data.loc[runners_on_batting_data['PA'] > 25]
@@ -139,4 +140,4 @@ def player_calc_situational_hitting_diff(batter):
 #calc_matchup('Red Sox', 'Dylan Bundy')
 #calc_matchup('Orioles', 'Steven Wright')
 #calc_team_pitch_value("Pirates")
-calc_situational_hitting_diff()
+#calc_situational_hitting_diff()
